@@ -102,7 +102,7 @@ def predict(model, image_tensor):
 model, model_loaded = load_model()
 
 # Header
-st.markdown("<h1 class='main-header'>🔬 Breast Cancer Detection</h1>", unsafe_allow_html=True)
+st.markdown("<h1 class='main-header'> Breast Cancer Detection</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center; color: gray;'>ResNet-based Histopathology Image Classification</h3>", unsafe_allow_html=True)
 
 # Model status
@@ -112,7 +112,7 @@ else:
     st.error("❌ Model file 'breast_cancer_resnet18.pth' not found. Please place it in the same directory as app.py.")
 
 # Introduction section
-with st.expander("📖 About This Model", expanded=True):
+with st.expander("📖 About This Model"):
     st.markdown("""
     ### Background
     This application uses a **ResNet (Residual Neural Network)** deep learning model trained to classify 
@@ -274,7 +274,7 @@ if st.session_state.predictions:
 st.markdown("---")
 st.markdown("""
 <div style='text-align: center; color: gray; font-size: 0.9rem;'>
-    <p>⚠️ <strong>Disclaimer:</strong> This tool is for educational and demonstration purposes only. 
+    <p> <strong>Disclaimer:</strong> This tool is for educational and demonstration purposes only. 
     It should not be used for actual medical diagnosis.</p>
     <p>Model trained on BreaKHis 400X Dataset | Built with Streamlit & PyTorch</p>
 </div>
