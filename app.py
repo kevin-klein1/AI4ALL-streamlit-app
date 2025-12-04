@@ -59,7 +59,7 @@ def load_model():
     
     # Load trained weights
     try:
-        model.load_state_dict(torch.load('breast_cancer_resnet18.pth', map_location=torch.device('cpu')))
+        model.load_state_dict(torch.load('breast_cancer_resnet18_v2.pth', map_location=torch.device('cpu')))
         model.eval()
         return model, True
     except FileNotFoundError:
@@ -109,7 +109,7 @@ st.markdown("<h3 style='text-align: center; color: gray;'>ResNet-based Histopath
 if model_loaded:
     st.success("✅ Model loaded successfully!")
 else:
-    st.error("❌ Model file 'breast_cancer_resnet18.pth' not found. Please place it in the same directory as app.py.")
+    st.error("❌ Model file 'breast_cancer_resnet18_v2.pth' not found. Please place it in the same directory as app.py.")
 
 # Introduction section
 with st.expander("📖 About This Model"):
